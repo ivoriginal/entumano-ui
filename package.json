@@ -1,9 +1,9 @@
 {
-  "name": "@congreso/ui",
-  "private": true,
+  "name": "@entumano/ui",
+  "private": false,
   "version": "0.0.1",
   "type": "module",
-  "description": "Design system sandbox for El Congreso en tu mano (Storybook + tokens B&W)",
+  "description": "Design system for the «en tu mano» brand (web + apps)",
   "sideEffects": [
     "**/*.css"
   ],
@@ -31,10 +31,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
-  },
   "devDependencies": {
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
@@ -53,6 +49,15 @@
     "vitest": "latest",
     "@vitest/browser-playwright": "latest",
     "@vitest/coverage-v8": "latest",
-    "playwright": "latest"
+    "playwright": "latest",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivoriginal/entumano-ui.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

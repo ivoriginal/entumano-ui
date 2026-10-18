@@ -25,3 +25,17 @@ src/stories/              # Storybook stories
 ```
 
 Not published as an npm package yet — iterate here first, then wire into the web app and Expo theme.
+
+## Package
+
+Published as **`@entumano/ui`** (brand-wide: Congreso, Senado, Autonomías…).
+
+```bash
+# GitHub (until npm org exists)
+npm install github:ivoriginal/entumano-ui#v0.0.1
+```
+
+```ts
+import "@entumano/ui/bridge-shadcn.css";
+import { Button } from "@entumano/ui";
+```
