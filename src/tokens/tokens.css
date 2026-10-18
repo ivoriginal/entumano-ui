@@ -1,0 +1,80 @@
+/**
+ * Congreso DS — tokens
+ * Forma y tipografía del artefacto «Datos que no imaginabas»
+ * (Bricolage + IBM Plex, radios 10–14, mono eyebrow).
+ * Color: blanco / negro / grises (sin verde ni naranja del original).
+ */
+
+:root {
+  color-scheme: light;
+
+  --bg: #f4f4f4;
+  --surface: #ffffff;
+  --ink: #111111;
+  --muted: #5c5c5c;
+  --line: #d6d6d6;
+  --track: #e4e4e4;
+
+  --accent: #111111;
+  --accent-ink: #ffffff;
+
+  /* Semántica en escala de grises */
+  --good: #111111;
+  --near: #757575;
+  --bad: #111111;
+
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui,
+    sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --radius-sm: 3px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 10px;
+  --space-4: 12px;
+  --space-5: 14px;
+  --space-6: 18px;
+  --space-7: 20px;
+  --space-8: 26px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0a0a0a;
+    --surface: #161616;
+    --ink: #f2f2f2;
+    --muted: #a3a3a3;
+    --line: #2e2e2e;
+    --track: #2a2a2a;
+    --accent: #f2f2f2;
+    --accent-ink: #0a0a0a;
+    --good: #f2f2f2;
+    --near: #a3a3a3;
+    --bad: #f2f2f2;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0a0a0a;
+  --surface: #161616;
+  --ink: #f2f2f2;
+  --muted: #a3a3a3;
+  --line: #2e2e2e;
+  --track: #2a2a2a;
+  --accent: #f2f2f2;
+  --accent-ink: #0a0a0a;
+  --good: #f2f2f2;
+  --near: #a3a3a3;
+  --bad: #f2f2f2;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}

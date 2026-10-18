@@ -1,0 +1,29 @@
+.ds-progress {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 4px;
+}
+
+.ds-tick {
+  height: 6px;
+  border-radius: var(--radius-sm);
+  background: var(--track);
+}
+
+.ds-tick--hit {
+  background: var(--good);
+}
+
+.ds-tick--near {
+  background: var(--near);
+}
+
+.ds-tick--miss {
+  background: var(--track);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+
+.ds-tick--now {
+  background: var(--muted);
+}

@@ -1,0 +1,29 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Congreso design system
+
+Sandbox visual para web y app de **El Congreso en tu mano**.
+
+## Origen
+
+Forma tomada del artefacto Claude [Datos que no imaginabas](https://claude.ai/artifact/NTGDAR2r7y55wKQLoQGoaq):
+
+- Display: **Bricolage Grotesque**
+- Body: **IBM Plex Sans**
+- Meta: **IBM Plex Mono**
+- Radios ~10–14px, cards con borde fino, CTAs sólidos
+
+## Decisión de color
+
+Paleta **blanco / negro / grises** (sin el verde `#1E6B49` ni el naranja del artefacto).
+La semántica hit / near / miss se resuelve con relleno, dashed y outline, no con color.
+
+## Cómo usar
+
+```bash
+npm run storybook
+```
+
+Tokens en `src/tokens/tokens.css`. Componentes en `src/components/*`.

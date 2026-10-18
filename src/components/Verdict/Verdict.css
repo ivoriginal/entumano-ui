@@ -1,0 +1,39 @@
+.ds-verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 7px 11px;
+  border-radius: var(--radius-pill);
+  border: 1px solid currentColor;
+  font: 600 0.8125rem / 1.2 var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.ds-verdict::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.ds-verdict--hit {
+  color: var(--good);
+}
+
+.ds-verdict--near {
+  color: var(--near);
+  border-style: dashed;
+}
+
+.ds-verdict--miss {
+  color: var(--bad);
+}
+
+.ds-verdict--miss::before {
+  background: transparent;
+  border: 1.5px solid currentColor;
+}

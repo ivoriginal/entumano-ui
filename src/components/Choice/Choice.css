@@ -1,0 +1,38 @@
+.ds-choice {
+  font: 600 1.0625rem var(--font-body);
+  min-height: 56px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+  padding: 12px 14px;
+}
+
+.ds-choice:hover:not(:disabled) {
+  border-color: var(--ink);
+}
+
+.ds-choice:disabled {
+  cursor: default;
+}
+
+.ds-choice--right {
+  border-color: var(--ink);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.ds-choice--wrong {
+  border-color: var(--muted);
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.ds-choice:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

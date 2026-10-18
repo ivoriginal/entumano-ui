@@ -1,0 +1,7 @@
+.ds-eyebrow {
+  font: 500 0.75rem / 1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
