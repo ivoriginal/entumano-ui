@@ -1,27 +1,29 @@
 /**
  * Congreso DS — tokens
- * Forma y tipografía del artefacto «Datos que no imaginabas»
- * (Bricolage + IBM Plex, radios 10–14, mono eyebrow).
- * Color: blanco / negro / grises (sin verde ni naranja del original).
+ *
+ * Chrome: neutro (papel / tinta). No bandas negras ni teal de marca.
+ * Semántica de voto y datos: color (sí verde, no rojo, abstención ámbar).
+ * Tipografía: Bricolage + IBM Plex (artefacto «Datos que no imaginabas»).
  */
 
 :root {
   color-scheme: light;
 
-  --bg: #f4f4f4;
+  --bg: #f6f6f4;
   --surface: #ffffff;
-  --ink: #111111;
-  --text-muted: #5c5c5c;
-  --line: #d6d6d6;
-  --track: #e4e4e4;
+  --ink: #141414;
+  --text-muted: #5a5a5a;
+  --line: #e0e0dc;
+  --track: #ebebe8;
 
-  --accent: #111111;
+  /* Acciones / CTAs: tinta, no relleno de hero */
+  --accent: #141414;
   --accent-ink: #ffffff;
 
-  /* Semántica en escala de grises */
-  --good: #111111;
-  --near: #757575;
-  --bad: #111111;
+  /* Semántica de resultado / voto — SÍ color */
+  --good: #1b7a4e;
+  --near: #8a6a12;
+  --bad: #b42318;
 
   --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui,
     sans-serif;
@@ -46,33 +48,33 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0a0a0a;
-    --surface: #161616;
-    --ink: #f2f2f2;
-    --text-muted: #a3a3a3;
-    --line: #2e2e2e;
-    --track: #2a2a2a;
-    --accent: #f2f2f2;
-    --accent-ink: #0a0a0a;
-    --good: #f2f2f2;
-    --near: #a3a3a3;
-    --bad: #f2f2f2;
+    --bg: #0c0c0c;
+    --surface: #171717;
+    --ink: #f3f3f3;
+    --text-muted: #a8a8a8;
+    --line: #2c2c2c;
+    --track: #262626;
+    --accent: #f3f3f3;
+    --accent-ink: #0c0c0c;
+    --good: #3dce84;
+    --near: #e0b04d;
+    --bad: #f07167;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0a0a0a;
-  --surface: #161616;
-  --ink: #f2f2f2;
-  --text-muted: #a3a3a3;
-  --line: #2e2e2e;
-  --track: #2a2a2a;
-  --accent: #f2f2f2;
-  --accent-ink: #0a0a0a;
-  --good: #f2f2f2;
-  --near: #a3a3a3;
-  --bad: #f2f2f2;
+  --bg: #0c0c0c;
+  --surface: #171717;
+  --ink: #f3f3f3;
+  --text-muted: #a8a8a8;
+  --line: #2c2c2c;
+  --track: #262626;
+  --accent: #f3f3f3;
+  --accent-ink: #0c0c0c;
+  --good: #3dce84;
+  --near: #e0b04d;
+  --bad: #f07167;
 }
 
 :root[data-theme="light"] {

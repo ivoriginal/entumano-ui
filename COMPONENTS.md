@@ -56,9 +56,14 @@ shadcn tiene ~40 primitivos; **uso real** es corto:
 
 El resto de `ui/*` (sidebar, calendar, carousel…) está en el kit pero casi no se importa: **no portar por defecto**.
 
-## Quedan en las apps (no en el DS)
+## Fuera del DS (no es roadmap)
 
-Features con datos/API: `SeguimientoVotaciones`, `MapaEspana`, `Patrimonio`, `ProgramaContraste`, quizzes enteros, push, chat, etc. El DS aporta piezas; las pantallas se montan en web/app.
+Esto solo dice qué **no empaquetamos** en el design system: pantallas con datos/API (`SeguimientoVotaciones`, `MapaEspana`, `Patrimonio`, push…). No es una lista de trabajo; el roadmap de producto vive en los repos de web/app.
+
+## Regla de color (tras trial B&W)
+
+- **Chrome / hero / tipografía:** neutro (papel claro, tinta). Heroes blancos, no bandas negras ni teal.
+- **Aprobado / Rechazado / sí / no / charts:** color (verde / rojo / ámbar / series). No grisificar semántica.
 
 ## Plan de trial (worktree + link)
 

@@ -1,5 +1,6 @@
 /**
- * Mapea tokens del DS (B&W) a variables semánticas de la web (shadcn / styles.css).
+ * Bridge DS → variables de la web.
+ * Chrome neutro; voto/estado/charts con color.
  */
 @import "./tokens.css";
 
@@ -10,27 +11,41 @@
   --card-foreground: var(--ink);
   --popover: var(--surface);
   --popover-foreground: var(--ink);
+
+  /* Primary = CTA tinta (botones), NO fondo de hero */
   --primary: var(--accent);
   --primary-foreground: var(--accent-ink);
+
   --secondary: var(--track);
   --secondary-foreground: var(--ink);
   --muted: var(--track);
   --muted-foreground: var(--text-muted);
-  --destructive: var(--ink);
-  --destructive-foreground: var(--accent-ink);
+  --destructive: var(--bad);
+  --destructive-foreground: #ffffff;
   --border: var(--line);
   --input: var(--line);
-  --ring: var(--ink);
+  --ring: var(--accent);
   --paper: var(--surface);
+  --ink: var(--ink);
+
+  /* Voto / resultado — color real */
   --si: var(--good);
   --no: var(--bad);
   --abstencion: var(--near);
   --ausente: var(--text-muted);
   --si-fill: var(--good);
   --no-fill: var(--bad);
-  --abstencion-fill: var(--near);
-  --spain-red: var(--ink);
-  --spain-gold: var(--near);
+  --abstencion-fill: #8a6a12;
+
+  --spain-red: #b42318;
+  --spain-gold: #c9a227;
+
+  /* Charts: paleta con color (no gris) */
+  --chart-1: #b42318;
+  --chart-2: #1b7a4e;
+  --chart-3: #2f6fed;
+  --chart-4: #c9a227;
+  --chart-5: #7c3aed;
 }
 
 .dark,
@@ -47,17 +62,27 @@
   --secondary-foreground: var(--ink);
   --muted: var(--track);
   --muted-foreground: var(--text-muted);
+  --destructive: var(--bad);
+  --destructive-foreground: #0c0c0c;
   --border: var(--line);
   --input: var(--line);
-  --ring: var(--ink);
+  --ring: var(--accent);
   --paper: var(--surface);
+
   --si: var(--good);
   --no: var(--bad);
   --abstencion: var(--near);
   --ausente: var(--text-muted);
-  --si-fill: var(--good);
-  --no-fill: var(--bad);
-  --abstencion-fill: var(--near);
-  --spain-red: var(--ink);
-  --spain-gold: var(--near);
+  --si-fill: #1b7a4e;
+  --no-fill: #b42318;
+  --abstencion-fill: #8a6a12;
+
+  --spain-red: #f07167;
+  --spain-gold: #e0c35a;
+
+  --chart-1: #f07167;
+  --chart-2: #3dce84;
+  --chart-3: #6b9fff;
+  --chart-4: #e0b04d;
+  --chart-5: #a78bfa;
 }
