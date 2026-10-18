@@ -16,9 +16,10 @@
   --line: #e0e0dc;
   --track: #ebebe8;
 
-  /* Acciones / CTAs: tinta, no relleno de hero */
-  --accent: #141414;
-  --accent-ink: #ffffff;
+  /* Acciones / CTAs: tinta, no relleno de hero.
+   * Nombre propio (--cta): no choca con shadcn --accent (= superficie hover). */
+  --cta: #141414;
+  --cta-ink: #ffffff;
 
   /* Semántica de resultado / voto — SÍ color */
   --good: #1b7a4e;
@@ -54,8 +55,8 @@
     --text-muted: #a8a8a8;
     --line: #2c2c2c;
     --track: #262626;
-    --accent: #f3f3f3;
-    --accent-ink: #0c0c0c;
+    --cta: #f3f3f3;
+    --cta-ink: #0c0c0c;
     --good: #3dce84;
     --near: #e0b04d;
     --bad: #f07167;
@@ -70,8 +71,8 @@
   --text-muted: #a8a8a8;
   --line: #2c2c2c;
   --track: #262626;
-  --accent: #f3f3f3;
-  --accent-ink: #0c0c0c;
+  --cta: #f3f3f3;
+  --cta-ink: #0c0c0c;
   --good: #3dce84;
   --near: #e0b04d;
   --bad: #f07167;

@@ -6,7 +6,7 @@ Análisis de `elcongresoentumano` (uso real en rutas/componentes) cruzado con el
 
 | DS | Equivalente web | Notas |
 |----|-----------------|-------|
-| Tokens B&W | `src/styles.css` `:root` | Bridge a `--primary` / `--background`… |
+| Tokens B&W | `src/styles.css` `:root` | Bridge: `--primary`←`--cta`, `--accent`←`--track` (hover shadcn) |
 | `Button` | `ui/button` (24 imports) | Sustituir en trial selectivo |
 | `Card` | `ui/card` + `.card` producto | Radios distintos (14 vs sm) |
 | `Eyebrow` | `.kicker` | Mono uppercase |

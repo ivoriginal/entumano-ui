@@ -1,6 +1,12 @@
 /**
- * Bridge DS → variables de la web.
- * Chrome neutro; voto/estado/charts con color.
+ * Bridge DS → variables shadcn / Tailwind de la web.
+ *
+ * Semántica shadcn (no redefinir al revés):
+ *   --primary  = acción / CTA
+ *   --accent   = superficie de hover / highlight sutil
+ *
+ * El DS usa --cta / --cta-ink para la tinta de acción; aquí se mapean
+ * a --primary. --accent shadcn sale de --track (no de --cta).
  */
 @import "./tokens.css";
 
@@ -13,18 +19,23 @@
   --popover-foreground: var(--ink);
 
   /* Primary = CTA tinta (botones), NO fondo de hero */
-  --primary: var(--accent);
-  --primary-foreground: var(--accent-ink);
+  --primary: var(--cta);
+  --primary-foreground: var(--cta-ink);
 
   --secondary: var(--track);
   --secondary-foreground: var(--ink);
   --muted: var(--track);
   --muted-foreground: var(--text-muted);
+
+  /* shadcn accent = hover surface (track), no la tinta CTA */
+  --accent: var(--track);
+  --accent-foreground: var(--ink);
+
   --destructive: var(--bad);
   --destructive-foreground: #ffffff;
   --border: var(--line);
   --input: var(--line);
-  --ring: var(--accent);
+  --ring: var(--cta);
   --paper: var(--surface);
   --ink: var(--ink);
 
@@ -56,17 +67,19 @@
   --card-foreground: var(--ink);
   --popover: var(--surface);
   --popover-foreground: var(--ink);
-  --primary: var(--accent);
-  --primary-foreground: var(--accent-ink);
+  --primary: var(--cta);
+  --primary-foreground: var(--cta-ink);
   --secondary: var(--track);
   --secondary-foreground: var(--ink);
   --muted: var(--track);
   --muted-foreground: var(--text-muted);
+  --accent: var(--track);
+  --accent-foreground: var(--ink);
   --destructive: var(--bad);
   --destructive-foreground: #0c0c0c;
   --border: var(--line);
   --input: var(--line);
-  --ring: var(--accent);
+  --ring: var(--cta);
   --paper: var(--surface);
 
   --si: var(--good);
