@@ -1,0 +1,63 @@
+/**
+ * Mapea tokens del DS (B&W) a variables semánticas de la web (shadcn / styles.css).
+ */
+@import "./tokens.css";
+
+:root {
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--accent);
+  --primary-foreground: var(--accent-ink);
+  --secondary: var(--track);
+  --secondary-foreground: var(--ink);
+  --muted: var(--track);
+  --muted-foreground: var(--text-muted);
+  --destructive: var(--ink);
+  --destructive-foreground: var(--accent-ink);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--ink);
+  --paper: var(--surface);
+  --si: var(--good);
+  --no: var(--bad);
+  --abstencion: var(--near);
+  --ausente: var(--text-muted);
+  --si-fill: var(--good);
+  --no-fill: var(--bad);
+  --abstencion-fill: var(--near);
+  --spain-red: var(--ink);
+  --spain-gold: var(--near);
+}
+
+.dark,
+:root[data-theme="dark"] {
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--accent);
+  --primary-foreground: var(--accent-ink);
+  --secondary: var(--track);
+  --secondary-foreground: var(--ink);
+  --muted: var(--track);
+  --muted-foreground: var(--text-muted);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--ink);
+  --paper: var(--surface);
+  --si: var(--good);
+  --no: var(--bad);
+  --abstencion: var(--near);
+  --ausente: var(--text-muted);
+  --si-fill: var(--good);
+  --no-fill: var(--bad);
+  --abstencion-fill: var(--near);
+  --spain-red: var(--ink);
+  --spain-gold: var(--near);
+}

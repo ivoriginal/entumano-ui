@@ -14,7 +14,7 @@ export default function App() {
         <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "clamp(1.9rem,7vw,2.6rem)", lineHeight: 1.02, letterSpacing: "-0.02em", margin: 0 }}>
           Congreso
         </h1>
-        <p style={{ margin: 0, color: "var(--muted)", maxWidth: "46ch" }}>
+        <p style={{ margin: 0, color: "var(--text-muted)", maxWidth: "46ch" }}>
           Preview local. El catálogo vivo está en Storybook.
         </p>
       </header>

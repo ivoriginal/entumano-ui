@@ -11,7 +11,7 @@
   --bg: #f4f4f4;
   --surface: #ffffff;
   --ink: #111111;
-  --muted: #5c5c5c;
+  --text-muted: #5c5c5c;
   --line: #d6d6d6;
   --track: #e4e4e4;
 
@@ -49,7 +49,7 @@
     --bg: #0a0a0a;
     --surface: #161616;
     --ink: #f2f2f2;
-    --muted: #a3a3a3;
+    --text-muted: #a3a3a3;
     --line: #2e2e2e;
     --track: #2a2a2a;
     --accent: #f2f2f2;
@@ -65,7 +65,7 @@
   --bg: #0a0a0a;
   --surface: #161616;
   --ink: #f2f2f2;
-  --muted: #a3a3a3;
+  --text-muted: #a3a3a3;
   --line: #2e2e2e;
   --track: #2a2a2a;
   --accent: #f2f2f2;

@@ -4,7 +4,7 @@ const SWATCHES = [
   { name: "bg", varName: "--bg" },
   { name: "surface", varName: "--surface" },
   { name: "ink", varName: "--ink" },
-  { name: "muted", varName: "--muted" },
+  { name: "muted", varName: "--text-muted" },
   { name: "line", varName: "--line" },
   { name: "track", varName: "--track" },
   { name: "accent", varName: "--accent" },
@@ -23,7 +23,7 @@ function TokensBoard() {
             font: "500 0.75rem/1 var(--font-mono)",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
-            color: "var(--muted)",
+            color: "var(--text-muted)",
             margin: 0,
           }}
         >
@@ -41,7 +41,7 @@ function TokensBoard() {
         >
           Congreso design system
         </h1>
-        <p style={{ color: "var(--muted)", maxWidth: "46ch", margin: "8px 0 0" }}>
+        <p style={{ color: "var(--text-muted)", maxWidth: "46ch", margin: "8px 0 0" }}>
           Misma tipografía y ritmo que el artefacto «Datos que no imaginabas»;
           paleta en escala de grises (sin verde).
         </p>
@@ -70,7 +70,7 @@ function TokensBoard() {
               <code
                 style={{
                   font: "500 11px var(--font-mono)",
-                  color: "var(--muted)",
+                  color: "var(--text-muted)",
                 }}
               >
                 {s.varName}
@@ -109,7 +109,7 @@ function TokensBoard() {
             font: "500 0.75rem/1.3 var(--font-mono)",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "var(--muted)",
+            color: "var(--text-muted)",
             margin: 0,
           }}
         >

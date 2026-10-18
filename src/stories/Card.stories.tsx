@@ -19,7 +19,7 @@ function CardDemo() {
       >
         ¿Cuántos escaños tiene el Congreso?
       </h2>
-      <p style={{ margin: 0, color: "var(--muted)" }}>
+      <p style={{ margin: 0, color: "var(--text-muted)" }}>
         Dato institucional del Reglamento, no una medición de actividad.
       </p>
       <Button>Comprobar</Button>

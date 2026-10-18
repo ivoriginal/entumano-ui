@@ -25,5 +25,5 @@
 }
 
 .ds-tick--now {
-  background: var(--muted);
+  background: var(--text-muted);
 }

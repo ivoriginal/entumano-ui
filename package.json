@@ -1,8 +1,28 @@
 {
-  "name": "congreso-design-system",
+  "name": "@congreso/ui",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "description": "Design system sandbox for El Congreso en tu mano (Storybook + tokens B&W)",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens.css": "./src/tokens/tokens.css",
+    "./bridge-shadcn.css": "./src/tokens/bridge-shadcn.css",
+    "./base.css": "./src/styles/base.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "COMPONENTS.md",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

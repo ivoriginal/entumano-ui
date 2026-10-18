@@ -26,8 +26,8 @@
 }
 
 .ds-choice--wrong {
-  border-color: var(--muted);
-  color: var(--muted);
+  border-color: var(--text-muted);
+  color: var(--text-muted);
   text-decoration: line-through;
   text-decoration-thickness: 1.5px;
 }
