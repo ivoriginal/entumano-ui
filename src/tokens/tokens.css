@@ -21,10 +21,16 @@
   --cta: #141414;
   --cta-ink: #ffffff;
 
-  /* Semántica de resultado / voto — SÍ color */
+  /* Semántica de resultado / voto — SÍ color.
+   * --good/--near/--bad: texto, iconos, bordes, leyendas.
+   * --*-fill: fondos sólidos con texto blanco (≥4,5:1). El ámbar claro
+   * no pasa con blanco; el fill va más oscuro. */
   --good: #1b7a4e;
   --near: #8a6a12;
   --bad: #b42318;
+  --good-fill: #1b7a4e;
+  --near-fill: #8a6a12;
+  --bad-fill: #b42318;
 
   --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui,
     sans-serif;
@@ -57,9 +63,14 @@
     --track: #262626;
     --cta: #f3f3f3;
     --cta-ink: #0c0c0c;
+    /* Claros para texto/iconos sobre fondo oscuro */
     --good: #3dce84;
     --near: #e0b04d;
     --bad: #f07167;
+    /* Fills se mantienen oscuros: blanco encima ≥4,5:1 */
+    --good-fill: #1b7a4e;
+    --near-fill: #8a6a12;
+    --bad-fill: #b42318;
   }
 }
 
@@ -76,6 +87,9 @@
   --good: #3dce84;
   --near: #e0b04d;
   --bad: #f07167;
+  --good-fill: #1b7a4e;
+  --near-fill: #8a6a12;
+  --bad-fill: #b42318;
 }
 
 :root[data-theme="light"] {

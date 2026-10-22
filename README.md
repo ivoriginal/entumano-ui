@@ -35,10 +35,17 @@ Published as **`@entumano/ui`** (brand-wide: Congreso, Senado, Autonomías…).
 
 ```bash
 # GitHub (until npm org exists)
-npm install github:ivoriginal/entumano-ui#v0.0.2
+npm install github:ivoriginal/entumano-ui#v0.0.3
 ```
 
 ```ts
 import "@entumano/ui/bridge-shadcn.css";
-import { Button } from "@entumano/ui";
+import { Button, inkOnColor } from "@entumano/ui";
+
+// Logos / badges de partido: tinta legible sobre el color oficial
+const ink = inkOnColor("#FFB511"); // → "#141414" (amarillos no pasan con blanco)
 ```
+
+**a11y de color (v0.0.3):**
+- `inkOnColor(bg)` elige blanco o `#141414` ≥4,5:1 sobre un fondo sólido (hex, rgb, hsl o `H S% L%`).
+- Tokens `--*-fill` (`--si-fill`, `--no-fill`, `--abstencion-fill`) para badges con texto blanco; en dark los `--si/--no/--abstencion` siguen claros para iconos/texto.

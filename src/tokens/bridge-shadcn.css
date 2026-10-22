@@ -39,14 +39,16 @@
   --paper: var(--surface);
   --ink: var(--ink);
 
-  /* Voto / resultado — color real */
+  /* Voto / resultado — color real.
+   * --si/--no/--abstencion: texto e iconos.
+   * --*-fill: badges sólidos con texto blanco (a11y). */
   --si: var(--good);
   --no: var(--bad);
   --abstencion: var(--near);
   --ausente: var(--text-muted);
-  --si-fill: var(--good);
-  --no-fill: var(--bad);
-  --abstencion-fill: #8a6a12;
+  --si-fill: var(--good-fill);
+  --no-fill: var(--bad-fill);
+  --abstencion-fill: var(--near-fill);
 
   --spain-red: #b42318;
   --spain-gold: #c9a227;
@@ -86,9 +88,9 @@
   --no: var(--bad);
   --abstencion: var(--near);
   --ausente: var(--text-muted);
-  --si-fill: #1b7a4e;
-  --no-fill: #b42318;
-  --abstencion-fill: #8a6a12;
+  --si-fill: var(--good-fill);
+  --no-fill: var(--bad-fill);
+  --abstencion-fill: var(--near-fill);
 
   --spain-red: #f07167;
   --spain-gold: #e0c35a;

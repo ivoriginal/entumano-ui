@@ -15,3 +15,6 @@ export type { VerdictProps, VerdictTone } from "./components/Verdict/Verdict";
 
 export { ProgressTicks } from "./components/ProgressTicks/ProgressTicks";
 export type { ProgressTicksProps, TickState } from "./components/ProgressTicks/ProgressTicks";
+
+export { inkOnColor, parseCssColorToRgb } from "./lib/ink-on-color";
+export type { InkOnColor } from "./lib/ink-on-color";
