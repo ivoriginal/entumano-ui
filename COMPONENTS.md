@@ -14,22 +14,17 @@ Análisis de `elcongresoentumano` (uso real en rutas/componentes) cruzado con el
 | `Choice` | botones V/F quiz | `datos-que-no-imaginabas`, quizzes |
 | `Verdict` | chips acierto/fallo | Quiz + contraste |
 | `ProgressTicks` | `<progress>` / ticks | Quiz |
+| `VotoPill` | fichas, diputado, histórico | si/no/abstención/ausente; exporta `VOTO_LABEL` |
+| `BarraRecuento` | ley, votaciones, perfiles | `recuento` por props; leyenda opcional |
+| `GrupoTag` | directorio, home, vista rápida | punto + siglas; `color` por props |
+| `PartidoLogo` | home, partidos, test, histórico | tinta por contraste (`inkOnColor`) |
+| `Avatar` | directorio, contacta, test | foto con borde de grupo / iniciales |
+| `Chip` | filtros leyes / histórico | `aria-pressed` |
+| `LeyCard` | home, catálogo | prop `as` para el `Link` del router; hijos = extras |
+| `LogoHemiciclo` | header, favicon | SVG `currentColor` |
+| `EtiquetaRelacion` | programas | sin Popover de Radix; `label` + `explicacion` por props |
 
-## Faltan — dominio político (prioridad alta)
-
-Estos son la voz del producto; sin ellos el DS no sirve a web ni a `congreso-movil`.
-
-| Componente | Dónde se usa | Notas |
-|------------|--------------|-------|
-| `VotoPill` | fichas, diputado, histórico | si/no/abstención/ausente |
-| `BarraRecuento` / `Barra` | ley, votaciones, perfiles | barra proporcional |
-| `GrupoTag` | directorio, home, vista rápida | punto + siglas |
-| `PartidoLogo` | home, partidos, test, histórico | bloque color oficial |
-| `Avatar` (diputado) | directorio, contacta, test | foto / iniciales |
-| `Chip` | filtros leyes / histórico | filtro activo |
-| `LeyCard` | home, catálogo | tarjeta de ficha |
-| `LogoHemiciclo` | header, favicon | marca |
-| `EtiquetaRelacion` | programas | directa / parcial |
+Los componentes de dominio **no importan datos**: reciben siglas, color, recuento, textos… por props. Cada web mapea sus tipos (`Ley`, `Diputado`, `grupoDe`).
 
 ## Faltan — chrome / layout (prioridad media)
 

@@ -1,0 +1,130 @@
+.ds-ley {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.ds-ley:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+}
+
+.ds-ley:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.ds-ley__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.ds-ley__head--si { background: var(--good-fill); }
+.ds-ley__head--no { background: var(--bad-fill); }
+
+.ds-ley__icono {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+
+.ds-ley__icono > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ds-ley__kicker {
+  font: 500 0.75rem / 1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ds-ley__estado {
+  margin-left: auto;
+}
+
+.ds-ley__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.ds-ley__fecha {
+  color: var(--text-muted);
+}
+
+.ds-ley__titulo {
+  margin: 0;
+  font: 700 1.5rem / 1.25 var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.ds-ley:hover .ds-ley__titulo {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ds-ley__resumen {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: color-mix(in srgb, var(--ink) 80%, transparent);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.ds-ley__impacto {
+  display: -webkit-box;
+  margin: 0;
+  padding: 12px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  border-radius: var(--radius-sm);
+  background: var(--track);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.ds-ley__foot {
+  display: block;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.ds-ley__cifras {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.ds-ley__cifras .ds-ley__kicker {
+  color: var(--text-muted);
+}
+
+.ds-ley__num {
+  font: 700 1.875rem / 1 var(--font-display);
+}
+
+.ds-ley__num--si { color: var(--good); }
+.ds-ley__num--no { color: var(--bad); }
+
+.ds-ley__pct {
+  margin-left: auto;
+}

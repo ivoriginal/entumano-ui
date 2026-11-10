@@ -1,0 +1,36 @@
+.ds-recuento__bar {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--track);
+}
+
+.ds-recuento__seg--si { background: var(--good-fill); }
+.ds-recuento__seg--no { background: var(--bad-fill); }
+.ds-recuento__seg--abstencion { background: var(--near-fill); }
+.ds-recuento__seg--ausente { background: var(--ausente); }
+
+.ds-recuento__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-muted);
+  font: 400 0.75rem / 1.4 var(--font-body);
+}
+
+.ds-recuento__legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ds-recuento__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

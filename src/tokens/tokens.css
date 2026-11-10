@@ -31,6 +31,8 @@
   --good-fill: #1b7a4e;
   --near-fill: #8a6a12;
   --bad-fill: #b42318;
+  /* «No vota» / ausente: neutro, ni a favor ni en contra. */
+  --ausente: #75726d;
 
   --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui,
     sans-serif;
@@ -71,6 +73,7 @@
     --good-fill: #1b7a4e;
     --near-fill: #8a6a12;
     --bad-fill: #b42318;
+    --ausente: #9a9893;
   }
 }
 
@@ -90,6 +93,7 @@
   --good-fill: #1b7a4e;
   --near-fill: #8a6a12;
   --bad-fill: #b42318;
+  --ausente: #9a9893;
 }
 
 :root[data-theme="light"] {

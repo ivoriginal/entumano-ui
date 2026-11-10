@@ -1,0 +1,34 @@
+.ds-chip {
+  flex: none;
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink);
+  font: 500 0.75rem / 1.3 var(--font-body);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.ds-chip:hover {
+  background: var(--track);
+}
+
+.ds-chip:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.ds-chip--active {
+  background: var(--track);
+  border-color: var(--ink);
+}
+
+@media (min-width: 1024px) {
+  .ds-chip {
+    white-space: normal;
+    text-align: left;
+  }
+}
