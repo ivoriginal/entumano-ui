@@ -14,36 +14,129 @@ const SWATCHES = [
   { name: "bad", varName: "--bad" },
 ] as const;
 
+const TYPE_ROLES = [
+  {
+    name: "display",
+    token: "--type-display",
+    sample: "La política, en tu mano",
+    note: "Hero / banda primaria. Tracking display.",
+    tracking: "var(--tracking-display)",
+  },
+  {
+    name: "score",
+    token: "--type-score",
+    sample: "176",
+    note: "Marcadores grandes (quiz / resultado).",
+  },
+  {
+    name: "title",
+    token: "--type-title",
+    sample: "Ley de Vivienda",
+    note: "Títulos de card y sección. Tracking title.",
+    tracking: "var(--tracking-title)",
+  },
+  {
+    name: "stat",
+    token: "--type-stat",
+    sample: "167 NO",
+    note: "Cifras de recuento en cards.",
+  },
+  {
+    name: "lead",
+    token: "--type-lead",
+    sample: "Resumen corto bajo un título, una idea por frase.",
+    note: "Párrafo de apoyo / lede.",
+  },
+  {
+    name: "body",
+    token: "--type-body",
+    sample:
+      "Cuerpo por defecto. La transparencia parlamentaria se lee mejor sin ruido de color.",
+    note: "Base del documento (también en body).",
+  },
+  {
+    name: "caption",
+    token: "--type-caption",
+    sample:
+      "Texto secundario: impacto, pies, bloques de lectura en cards.",
+    note: "sm + leading relaxed.",
+  },
+  {
+    name: "ui",
+    token: "--type-ui",
+    sample: "Seguir votación",
+    note: "Botones y Choice.",
+  },
+  {
+    name: "label",
+    token: "--type-label",
+    sample: "SÍ · NO · ABSTENCIÓN",
+    note: "Pills, tags compactos.",
+  },
+  {
+    name: "eyebrow",
+    token: "--type-eyebrow",
+    sample: "Vivienda",
+    note: "Mono uppercase + tracking meta.",
+    tracking: "var(--tracking-meta)",
+    transform: "uppercase" as const,
+  },
+  {
+    name: "meta",
+    token: "--type-meta",
+    sample: "Fuente · BOE · 27 abr 2023",
+    note: "Meta con leading snug.",
+    tracking: "var(--tracking-meta)",
+    transform: "uppercase" as const,
+  },
+] as const;
+
+const TEXT_SIZES = [
+  ["--text-xs", "0.75rem"],
+  ["--text-sm", "0.875rem"],
+  ["--text-md", "1rem"],
+  ["--text-ui", "1.0625rem"],
+  ["--text-lg", "1.125rem"],
+  ["--text-xl", "1.5rem"],
+  ["--text-2xl", "1.875rem"],
+  ["--text-3xl", "clamp hero"],
+  ["--text-4xl", "clamp score"],
+] as const;
+
+const LEADINGS = [
+  ["--leading-none", "1"],
+  ["--leading-tight", "1.2"],
+  ["--leading-snug", "1.4"],
+  ["--leading-normal", "1.5"],
+  ["--leading-relaxed", "1.75"],
+] as const;
+
 function TokensBoard() {
   return (
     <div style={{ display: "grid", gap: 28, maxWidth: 720 }}>
       <div>
         <p
           style={{
-            font: "500 0.75rem/1 var(--font-mono)",
-            letterSpacing: "0.1em",
+            font: "var(--type-eyebrow)",
+            letterSpacing: "var(--tracking-meta)",
             textTransform: "uppercase",
             color: "var(--text-muted)",
             margin: 0,
           }}
         >
-          Tokens · blanco y negro
+          Tokens · color
         </p>
         <h1
           style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 800,
-            fontSize: "clamp(1.9rem, 7vw, 2.6rem)",
-            lineHeight: 1.02,
-            letterSpacing: "-0.02em",
+            font: "var(--type-display)",
+            letterSpacing: "var(--tracking-display)",
             margin: "6px 0 0",
           }}
         >
           Congreso design system
         </h1>
         <p style={{ color: "var(--text-muted)", maxWidth: "46ch", margin: "8px 0 0" }}>
-          Misma tipografía y ritmo que el artefacto «Datos que no imaginabas»;
-          paleta en escala de grises (sin verde).
+          Chrome neutro; semántica de voto en color. Tipografía: ver story Type.
         </p>
       </div>
 
@@ -69,7 +162,7 @@ function TokensBoard() {
               <div style={{ fontWeight: 600, fontSize: 13 }}>{s.name}</div>
               <code
                 style={{
-                  font: "500 11px var(--font-mono)",
+                  font: "var(--weight-medium) 11px/1.3 var(--font-mono)",
                   color: "var(--text-muted)",
                 }}
               >
@@ -79,54 +172,188 @@ function TokensBoard() {
           </div>
         ))}
       </div>
+    </div>
+  );
+}
 
-      <div
-        style={{
-          display: "grid",
-          gap: 12,
-          background: "var(--surface)",
-          border: "1px solid var(--line)",
-          borderRadius: 14,
-          padding: 20,
-        }}
-      >
+function TypeBoard() {
+  return (
+    <div style={{ display: "grid", gap: 32, maxWidth: 720 }}>
+      <div>
         <p
           style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 700,
-            fontSize: "1.5rem",
-            margin: 0,
-          }}
-        >
-          Bricolage Grotesque — display
-        </p>
-        <p style={{ fontFamily: "var(--font-body)", margin: 0 }}>
-          IBM Plex Sans — cuerpo. La transparencia parlamentaria se lee mejor
-          sin ruido de color.
-        </p>
-        <p
-          style={{
-            font: "500 0.75rem/1.3 var(--font-mono)",
-            letterSpacing: "0.08em",
+            font: "var(--type-eyebrow)",
+            letterSpacing: "var(--tracking-meta)",
             textTransform: "uppercase",
             color: "var(--text-muted)",
             margin: 0,
           }}
         >
-          IBM Plex Mono — meta / eyebrow
+          Tokens · tipografía
+        </p>
+        <h1
+          style={{
+            font: "var(--type-display)",
+            letterSpacing: "var(--tracking-display)",
+            margin: "6px 0 0",
+          }}
+        >
+          Escala y roles
+        </h1>
+        <p
+          style={{
+            font: "var(--type-body)",
+            color: "var(--text-muted)",
+            maxWidth: "52ch",
+            margin: "8px 0 0",
+          }}
+        >
+          Preferir roles (<code>--type-*</code>) en UI. Átomos (
+          <code>--text-*</code>, <code>--leading-*</code>) solo al componer.
+          No inventar line-heights sueltos en las webs.
         </p>
       </div>
+
+      <section style={{ display: "grid", gap: 16 }}>
+        {TYPE_ROLES.map((role) => (
+          <div
+            key={role.name}
+            style={{
+              display: "grid",
+              gap: 6,
+              padding: "14px 16px",
+              border: "1px solid var(--line)",
+              borderRadius: "var(--radius-md)",
+              background: "var(--surface)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "6px 12px",
+                alignItems: "baseline",
+              }}
+            >
+              <code
+                style={{
+                  font: "var(--type-meta)",
+                  letterSpacing: "var(--tracking-meta)",
+                  textTransform: "uppercase",
+                  color: "var(--text-muted)",
+                }}
+              >
+                {role.token}
+              </code>
+              <span
+                style={{
+                  font: "var(--type-caption)",
+                  color: "var(--text-muted)",
+                }}
+              >
+                {role.note}
+              </span>
+            </div>
+            <p
+              style={{
+                margin: 0,
+                font: `var(${role.token})`,
+                letterSpacing: "tracking" in role ? role.tracking : undefined,
+                textTransform: "transform" in role ? role.transform : undefined,
+              }}
+            >
+              {role.sample}
+            </p>
+          </div>
+        ))}
+      </section>
+
+      <section
+        style={{
+          display: "grid",
+          gap: 12,
+          padding: 16,
+          border: "1px solid var(--line)",
+          borderRadius: "var(--radius-md)",
+          background: "var(--surface)",
+        }}
+      >
+        <p
+          style={{
+            margin: 0,
+            font: "var(--type-eyebrow)",
+            letterSpacing: "var(--tracking-meta)",
+            textTransform: "uppercase",
+            color: "var(--text-muted)",
+          }}
+        >
+          Átomos
+        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 16,
+          }}
+        >
+          <ul
+            style={{
+              margin: 0,
+              padding: 0,
+              listStyle: "none",
+              display: "grid",
+              gap: 6,
+              font: "var(--type-caption)",
+            }}
+          >
+            {TEXT_SIZES.map(([token, value]) => (
+              <li key={token}>
+                <code style={{ fontFamily: "var(--font-mono)" }}>{token}</code>{" "}
+                <span style={{ color: "var(--text-muted)" }}>{value}</span>
+              </li>
+            ))}
+          </ul>
+          <ul
+            style={{
+              margin: 0,
+              padding: 0,
+              listStyle: "none",
+              display: "grid",
+              gap: 6,
+              font: "var(--type-caption)",
+            }}
+          >
+            {LEADINGS.map(([token, value]) => (
+              <li key={token}>
+                <code style={{ fontFamily: "var(--font-mono)" }}>{token}</code>{" "}
+                <span style={{ color: "var(--text-muted)" }}>{value}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p style={{ margin: 0, font: "var(--type-caption)", color: "var(--text-muted)" }}>
+          Familias: <code>--font-display</code>, <code>--font-body</code>,{" "}
+          <code>--font-mono</code>. Tracking: <code>--tracking-display</code>,{" "}
+          <code>--tracking-title</code>, <code>--tracking-meta</code>.
+        </p>
+      </section>
     </div>
   );
 }
 
 const meta = {
   title: "Foundation/Tokens",
-  component: TokensBoard,
   parameters: { layout: "padded" },
-} satisfies Meta<typeof TokensBoard>;
+} satisfies Meta;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Palette: Story = {};
+export const Palette: Story = {
+  render: () => <TokensBoard />,
+};
+
+export const Type: Story = {
+  name: "Type",
+  render: () => <TypeBoard />,
+};

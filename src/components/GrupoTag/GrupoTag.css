@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font: 600 0.75rem / 1.2 var(--font-body);
+  font: var(--weight-semibold) var(--text-xs) / var(--leading-tight) var(--font-body);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }

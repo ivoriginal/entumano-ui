@@ -56,6 +56,20 @@ El resto de `ui/*` (sidebar, calendar, carousel…) está en el kit pero casi no
 
 Esto solo dice qué **no empaquetamos** en el design system: pantallas con datos/API (`SeguimientoVotaciones`, `MapaEspana`, `Patrimonio`, push…). No es una lista de trabajo; el roadmap de producto vive en los repos de web/app.
 
+## Tipografía
+
+Escala en `tokens.css`. Preferir roles (`font: var(--type-title)`); átomos solo al componer.
+
+| Rol | Uso |
+|-----|-----|
+| `--type-display` / `--type-score` | Hero y marcadores |
+| `--type-title` / `--type-stat` | Títulos de card / cifras |
+| `--type-lead` / `--type-body` / `--type-caption` | Lectura |
+| `--type-ui` / `--type-label` | Botones, pills, tags |
+| `--type-eyebrow` / `--type-meta` | Mono uppercase |
+
+Leading fijo: `none 1` · `tight 1.2` · `snug 1.4` · `normal 1.5` · `relaxed 1.75`. Story: Foundation → Tokens → Type.
+
 ## Regla de color (tras trial B&W)
 
 - **Chrome / hero / tipografía:** neutro (papel claro, tinta). Heroes blancos, no bandas negras ni teal.

@@ -20,7 +20,7 @@
   padding: 0;
   list-style: none;
   color: var(--text-muted);
-  font: 400 0.75rem / 1.4 var(--font-body);
+  font: var(--weight-regular) var(--text-xs) / var(--leading-snug) var(--font-body);
 }
 
 .ds-recuento__legend li {

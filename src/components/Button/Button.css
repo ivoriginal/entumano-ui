@@ -1,5 +1,5 @@
 .ds-btn {
-  font: 600 1.0625rem var(--font-body);
+  font: var(--type-ui);
   min-height: 52px;
   padding: 12px 20px;
   border-radius: var(--radius-md);
@@ -34,7 +34,7 @@
 .ds-btn--sm {
   min-height: 44px;
   padding: 10px 12px;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .ds-btn:focus-visible {
