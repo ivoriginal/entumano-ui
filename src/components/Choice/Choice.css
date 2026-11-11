@@ -1,5 +1,5 @@
 .ds-choice {
-  font: 600 1.0625rem var(--font-body);
+  font: var(--type-ui);
   min-height: 56px;
   border-radius: var(--radius-md);
   border: 1.5px solid var(--line);

@@ -12,7 +12,7 @@
   border-radius: var(--radius-pill);
   background: var(--track);
   color: var(--ink);
-  font: 500 0.75rem / 1.4 var(--font-body);
+  font: var(--weight-medium) var(--text-xs) / var(--leading-snug) var(--font-body);
   cursor: pointer;
 }
 
@@ -38,7 +38,7 @@
   height: 13px;
   border: 1px solid currentColor;
   border-radius: 50%;
-  font: italic 600 0.5625rem / 1 var(--font-body);
+  font: italic var(--weight-semibold) 0.5625rem / var(--leading-none) var(--font-body);
   opacity: 0.75;
 }
 
@@ -56,7 +56,7 @@
   border-radius: var(--radius-md);
   background: var(--surface);
   box-shadow: 0 6px 24px rgb(0 0 0 / 0.12);
-  font: 400 0.875rem / 1.5 var(--font-body);
+  font: var(--type-caption);
   color: var(--text-muted);
 }
 

@@ -6,7 +6,7 @@
   padding: 7px 11px;
   border-radius: var(--radius-pill);
   border: 1px solid currentColor;
-  font: 600 0.8125rem / 1.2 var(--font-mono);
+  font: var(--weight-semibold) var(--text-xs) / var(--leading-tight) var(--font-mono);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   width: fit-content;

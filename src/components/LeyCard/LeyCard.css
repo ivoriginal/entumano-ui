@@ -45,8 +45,8 @@
 }
 
 .ds-ley__kicker {
-  font: 500 0.75rem / 1 var(--font-mono);
-  letter-spacing: 0.1em;
+  font: var(--type-eyebrow);
+  letter-spacing: var(--tracking-meta);
   text-transform: uppercase;
 }
 
@@ -68,8 +68,8 @@
 
 .ds-ley__titulo {
   margin: 0;
-  font: 700 1.5rem / 1.25 var(--font-display);
-  letter-spacing: -0.01em;
+  font: var(--type-title);
+  letter-spacing: var(--tracking-title);
 }
 
 .ds-ley:hover .ds-ley__titulo {
@@ -84,8 +84,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   color: color-mix(in srgb, var(--ink) 80%, transparent);
-  font-size: 0.9375rem;
-  line-height: 1.75;
+  font: var(--type-caption);
 }
 
 .ds-ley__impacto {
@@ -97,8 +96,7 @@
   -webkit-line-clamp: 3;
   border-radius: var(--radius-sm);
   background: var(--track);
-  font-size: 0.875rem;
-  line-height: 1.75;
+  font: var(--type-caption);
 }
 
 .ds-ley__foot {
@@ -119,7 +117,7 @@
 }
 
 .ds-ley__num {
-  font: 700 1.875rem / 1 var(--font-display);
+  font: var(--type-stat);
 }
 
 .ds-ley__num--si { color: var(--good); }

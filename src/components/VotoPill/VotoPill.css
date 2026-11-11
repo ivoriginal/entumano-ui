@@ -8,7 +8,7 @@
   border: 1px solid color-mix(in srgb, var(--voto) 40%, transparent);
   background: color-mix(in srgb, var(--voto) 14%, transparent);
   color: var(--voto);
-  font: 600 0.75rem / 1.4 var(--font-body);
+  font: var(--type-label);
   white-space: nowrap;
 }
 
