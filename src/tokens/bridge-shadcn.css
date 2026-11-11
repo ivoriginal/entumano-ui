@@ -41,11 +41,11 @@
 
   /* Voto / resultado — color real.
    * --si/--no/--abstencion: texto e iconos.
-   * --*-fill: badges sólidos con texto blanco (a11y). */
+   * --*-fill: badges sólidos con texto blanco (a11y).
+   * --ausente vive en tokens.css; no redefinir aquí. */
   --si: var(--good);
   --no: var(--bad);
   --abstencion: var(--near);
-  --ausente: var(--text-muted);
   --si-fill: var(--good-fill);
   --no-fill: var(--bad-fill);
   --abstencion-fill: var(--near-fill);
@@ -87,7 +87,6 @@
   --si: var(--good);
   --no: var(--bad);
   --abstencion: var(--near);
-  --ausente: var(--text-muted);
   --si-fill: var(--good-fill);
   --no-fill: var(--bad-fill);
   --abstencion-fill: var(--near-fill);
