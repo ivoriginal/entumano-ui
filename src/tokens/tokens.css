@@ -27,10 +27,11 @@
    * no pasa con blanco; el fill va más oscuro. */
   --good: #1b7a4e;
   --near: #8a6a12;
-  --bad: #b42318;
+  /* Rojo oscuro (no ladrillo): ≥8:1 sobre blanco; fill con tinta blanca. */
+  --bad: #9f1510;
   --good-fill: #1b7a4e;
   --near-fill: #8a6a12;
-  --bad-fill: #b42318;
+  --bad-fill: #9f1510;
   /* «No vota» / ausente: neutro, ni a favor ni en contra. */
   --ausente: #75726d;
 
@@ -68,11 +69,11 @@
     /* Claros para texto/iconos sobre fondo oscuro */
     --good: #3dce84;
     --near: #e0b04d;
-    --bad: #f07167;
+    --bad: #ff6b5c;
     /* Fills se mantienen oscuros: blanco encima ≥4,5:1 */
     --good-fill: #1b7a4e;
     --near-fill: #8a6a12;
-    --bad-fill: #b42318;
+    --bad-fill: #9f1510;
     --ausente: #9a9893;
   }
 }
@@ -89,10 +90,10 @@
   --cta-ink: #0c0c0c;
   --good: #3dce84;
   --near: #e0b04d;
-  --bad: #f07167;
+  --bad: #ff6b5c;
   --good-fill: #1b7a4e;
   --near-fill: #8a6a12;
-  --bad-fill: #b42318;
+  --bad-fill: #9f1510;
   --ausente: #9a9893;
 }
 

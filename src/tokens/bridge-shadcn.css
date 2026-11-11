@@ -50,11 +50,11 @@
   --no-fill: var(--bad-fill);
   --abstencion-fill: var(--near-fill);
 
-  --spain-red: #b42318;
+  --spain-red: var(--bad);
   --spain-gold: #c9a227;
 
   /* Charts: paleta con color (no gris) */
-  --chart-1: #b42318;
+  --chart-1: var(--bad);
   --chart-2: #1b7a4e;
   --chart-3: #2f6fed;
   --chart-4: #c9a227;
@@ -91,10 +91,10 @@
   --no-fill: var(--bad-fill);
   --abstencion-fill: var(--near-fill);
 
-  --spain-red: #f07167;
+  --spain-red: var(--bad);
   --spain-gold: #e0c35a;
 
-  --chart-1: #f07167;
+  --chart-1: var(--bad);
   --chart-2: #3dce84;
   --chart-3: #6b9fff;
   --chart-4: #e0b04d;
