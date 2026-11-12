@@ -1,0 +1,35 @@
+.ds-pill-elecciones {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: baseline;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text-muted);
+  font: var(--weight-regular) var(--text-xs) / var(--leading-snug) var(--font-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.ds-pill-elecciones:hover {
+  border-color: var(--ink);
+}
+
+.ds-pill-elecciones:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.ds-pill-elecciones__fuerte {
+  color: var(--ink);
+  font-weight: var(--weight-semibold);
+}
+
+.ds-pill-elecciones__num {
+  font-variant-numeric: tabular-nums;
+}

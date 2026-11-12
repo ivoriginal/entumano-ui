@@ -22,6 +22,8 @@ Análisis de `elcongresoentumano` (uso real en rutas/componentes) cruzado con el
 | `Chip` | filtros leyes / histórico | `aria-pressed` |
 | `LeyCard` | home, catálogo | prop `as` para el `Link` del router; hijos = extras |
 | `LogoHemiciclo` | header, favicon | SVG `currentColor` |
+| `ApoyoCapsula` / `ApoyoBotones` | todas las webs React | barra móvil + cápsula escritorio con scroll; botones blancos fijos; `onApoyo` para analítica; texto por props. Las Cortes (vanilla) copian el CSS de `ApoyoCapsula.css` |
+| `PillElecciones` | hero de Congreso, Senado, Cortes | cuenta atrás 29N → constitución → legislatura; `as` para el `Link`; textos por props; fechas únicas en `fechas-29n.ts` (`ELECCIONES_29N`, `CONSTITUCION_CORTES`, `faseCiclo`). Las Cortes (vanilla) copian el CSS |
 | `EtiquetaRelacion` | programas | sin Popover de Radix; `label` + `explicacion` por props |
 
 Los componentes de dominio **no importan datos**: reciben siglas, color, recuento, textos… por props. Cada web mapea sus tipos (`Ley`, `Diputado`, `grupoDe`).
