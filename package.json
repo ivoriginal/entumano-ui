@@ -1,7 +1,7 @@
 {
   "name": "@entumano/ui",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "description": "Design system for the «en tu mano» brand (web + apps)",
   "sideEffects": [
@@ -9,7 +9,9 @@
   ],
   "exports": {
     ".": "./src/index.ts",
+    "./tokens": "./src/tokens/tokens.ts",
     "./tokens.css": "./src/tokens/tokens.css",
+    "./ink": "./src/lib/ink-on-color.ts",
     "./bridge-shadcn.css": "./src/tokens/bridge-shadcn.css",
     "./base.css": "./src/styles/base.css",
     "./package.json": "./package.json"
@@ -23,11 +25,18 @@
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
+    "tokens:generate": "node scripts/generate-tokens-ts.mjs",
+    "prebuild": "npm run tokens:generate",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

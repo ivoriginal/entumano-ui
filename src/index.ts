@@ -48,3 +48,14 @@ export { cssColor } from "./lib/css-color";
 
 export { inkOnColor, parseCssColorToRgb } from "./lib/ink-on-color";
 export type { InkOnColor } from "./lib/ink-on-color";
+
+export {
+  lightColors,
+  darkColors,
+  colorsFor,
+  fontFamilies,
+  radii,
+  space,
+  spainGold,
+} from "./tokens/tokens";
+export type { ColorSchemeName, ColorTokens } from "./tokens/tokens";

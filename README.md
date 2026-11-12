@@ -35,16 +35,21 @@ Published as **`@entumano/ui`** (brand-wide: Congreso, Senado, Autonomías…).
 
 ```bash
 # GitHub (until npm org exists)
-npm install github:ivoriginal/entumano-ui#v0.0.3
+npm install github:ivoriginal/entumano-ui#v0.0.8
 ```
 
 ```ts
 import "@entumano/ui/bridge-shadcn.css";
 import { Button, inkOnColor } from "@entumano/ui";
+// React Native / JS sin CSS:
+import { lightColors, darkColors } from "@entumano/ui/tokens";
+import { inkOnColor as ink } from "@entumano/ui/ink";
 
 // Logos / badges de partido: tinta legible sobre el color oficial
-const ink = inkOnColor("#FFB511"); // → "#141414" (amarillos no pasan con blanco)
+const onParty = inkOnColor("#FFB511"); // → "#141414" (amarillos no pasan con blanco)
 ```
+
+Tras cambiar `tokens.css`: `npm run tokens:generate` (también en `prebuild`).
 
 **a11y de color (v0.0.3):**
 - `inkOnColor(bg)` elige blanco o `#141414` ≥4,5:1 sobre un fondo sólido (hex, rgb, hsl o `H S% L%`).
