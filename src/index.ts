@@ -44,7 +44,26 @@ export { LogoHemiciclo } from "./components/LogoHemiciclo/LogoHemiciclo";
 export { EtiquetaRelacion } from "./components/EtiquetaRelacion/EtiquetaRelacion";
 export type { EtiquetaRelacionProps } from "./components/EtiquetaRelacion/EtiquetaRelacion";
 
+export { ApoyoCapsula, ApoyoBotones } from "./components/ApoyoCapsula/ApoyoCapsula";
+export type { ApoyoCapsulaProps, ApoyoBotonesProps, RedApoyo } from "./components/ApoyoCapsula/ApoyoCapsula";
+
+export { PillElecciones } from "./components/PillElecciones/PillElecciones";
+export type { PillEleccionesProps, PillEleccionesTextos } from "./components/PillElecciones/PillElecciones";
+export { ELECCIONES_29N, CONSTITUCION_CORTES, faseCiclo } from "./lib/fechas-29n";
+export type { FaseCiclo } from "./lib/fechas-29n";
+
 export { cssColor } from "./lib/css-color";
 
 export { inkOnColor, parseCssColorToRgb } from "./lib/ink-on-color";
 export type { InkOnColor } from "./lib/ink-on-color";
+
+export {
+  lightColors,
+  darkColors,
+  colorsFor,
+  fontFamilies,
+  radii,
+  space,
+  spainGold,
+} from "./tokens/tokens";
+export type { ColorSchemeName, ColorTokens } from "./tokens/tokens";
