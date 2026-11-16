@@ -1,4 +1,4 @@
-import { useEffect, useState, type ComponentPropsWithoutRef, type ElementType } from "react";
+import { Fragment, useEffect, useState, type ComponentPropsWithoutRef, type ElementType, type ReactNode } from "react";
 import { faseCiclo, type FaseCiclo } from "../../lib/fechas-29n";
 import "./PillElecciones.css";
 
@@ -11,7 +11,30 @@ export type PillEleccionesTextos = {
   constitucion: string;
   /** Tras los días: «de la XVI legislatura» */
   legislatura: string;
+  /**
+   * Opcional. Orden propio de las piezas hasta las elecciones, para idiomas cuya sintaxis no es
+   * «días + texto + fecha». Marcadores: `{dias}` (p. ej. «13 días», en negrita) y `{fecha}` («29N», en negrita).
+   * Por defecto: `{dias} ${elecciones} {fecha}`. Ejemplo en euskera: `{fecha} hauteskundeetarako {dias} falta dira`.
+   */
+  plantillaElecciones?: string;
+  /** Opcional. Marcador `{dias}`. Por defecto: `{dias} ${constitucion}`. */
+  plantillaConstitucion?: string;
+  /** Opcional. Marcador `{dias}`. Por defecto: `{dias} ${legislatura}`. */
+  plantillaLegislatura?: string;
 };
+
+/** Parte una plantilla en texto suelto y marcadores `{dias}` / `{fecha}`; el texto suelto va en `<span>` (la pill es un flex con `gap`). */
+function piezas(plantilla: string, nodos: { dias: ReactNode; fecha: ReactNode }): ReactNode[] {
+  return plantilla
+    .split(/(\{dias\}|\{fecha\})/)
+    .map((parte, i) => {
+      if (parte === "{dias}") return <Fragment key={i}>{nodos.dias}</Fragment>;
+      if (parte === "{fecha}") return <Fragment key={i}>{nodos.fecha}</Fragment>;
+      const texto = parte.trim();
+      return texto ? <span key={i}>{texto}</span> : null;
+    })
+    .filter(Boolean);
+}
 
 export type PillEleccionesProps = Omit<ComponentPropsWithoutRef<"a">, "children"> &
   Record<string, unknown> & {
@@ -44,19 +67,23 @@ export function PillElecciones({ as: Root = "a", textos, ahora, className = "", 
 
   const estado = ahora != null ? faseCiclo(ahora) : vivo;
   const fase = estado?.fase ?? "elecciones";
-  return (
-    <Root className={["ds-pill-elecciones", className].filter(Boolean).join(" ")} {...rest}>
+  const nodos = {
+    dias: (
       <strong className="ds-pill-elecciones__fuerte ds-pill-elecciones__num">
         {estado?.dias ?? "–"} {textos.dias}
       </strong>
-      {fase === "elecciones" ? (
-        <>
-          <span>{textos.elecciones}</span>
-          <strong className="ds-pill-elecciones__fuerte">29N</strong>
-        </>
-      ) : (
-        <span>{fase === "hastaConstitucion" ? textos.constitucion : textos.legislatura}</span>
-      )}
+    ),
+    fecha: <strong className="ds-pill-elecciones__fuerte">29N</strong>,
+  };
+  const plantilla =
+    fase === "elecciones"
+      ? (textos.plantillaElecciones ?? `{dias} ${textos.elecciones} {fecha}`)
+      : fase === "hastaConstitucion"
+        ? (textos.plantillaConstitucion ?? `{dias} ${textos.constitucion}`)
+        : (textos.plantillaLegislatura ?? `{dias} ${textos.legislatura}`);
+  return (
+    <Root className={["ds-pill-elecciones", className].filter(Boolean).join(" ")} {...rest}>
+      {piezas(plantilla, nodos)}
       <span aria-hidden>→</span>
     </Root>
   );
